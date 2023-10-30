@@ -52,4 +52,29 @@ sorting and describing data
 shows mean, std, min, max, and more useful information dealing with statistics
 """
 #print(dataframe.describe())
-#16:12
+#print(dataframe.sort_values("Name"))
+#print(dataframe.sort_values("Name", ascending= False))
+#print(dataframe.sort_values(["Type 1", "HP"]))
+#print(dataframe.sort_values(["Type 1", "HP"], ascending= [1,0]))
+
+"""
+Making changes to data
+"""
+#dataframe['Total'] = dataframe['HP'] + dataframe['Attack'] + dataframe['Defense'] + dataframe['Sp. Atk'] + dataframe['Sp. Def'] + dataframe['Speed']
+#dataframef = dataframe.drop(columns=['Total'])
+#dataframe['Total'] = dataframe.iloc[:, 4:10].sum(axis=1)
+
+"""
+saving data to a new file, naming it and adjusting it
+"""
+#dataframe.to_csv('modified.csv', index=False)
+#dataframe.to_excel('modified.xlsx', index=False)
+#dataframe.to_csv('modified.txt', index=False, sep='\t')
+
+"""
+filtering data aka setting conditions
+"""
+#new_df = dataframe.loc[(dataframe['Type 1'] == 'Grass') & (dataframe['Type 2'] == 'Poison') & (dataframe['HP'] > 70)]
+#new_df.reset_index(drop=True, inplace=True)
+#new_df.to_csv('filtered.csv')
+#dataframe.loc[df['Total'] > 500, ['Generation','Legendary']] = ['Test 1', 'Test 2']
