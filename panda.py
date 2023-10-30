@@ -28,3 +28,28 @@ dataframe = pd.read_csv('pokemon_data.csv')
 """read each column or multiple columns"""
 #print(dataframe['Name'])
 #print(dataframe[["Name", "Type 1", "HP"]])
+
+"""read each row"""
+#print(dataframe.iloc[2])
+
+"""
+read a specific location (X,Y), in this example it is the 
+data on the index position 2 (row2) and the 1st piece of data on that row.
+"""
+#print(dataframe.iloc[2,1])
+
+"""iterating through each row and sorting"""
+#for index, row in dataframe.iterrows():
+    #print(index, row)
+
+#for index, row in dataframe.iterrows():
+    #print(index, row ['Name'])
+
+#print(dataframe.loc[dataframe['Type 1'] == "Fire"])
+
+"""
+sorting and describing data
+shows mean, std, min, max, and more useful information dealing with statistics
+"""
+#print(dataframe.describe())
+#16:12
